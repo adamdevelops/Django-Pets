@@ -1,3 +1,5 @@
+{% extends "base.html" %}
+{% block content %}
 <div>
   <h3>{{ pet.name|capfirst }}</h3>
   <p>
@@ -32,5 +34,6 @@
     <p>  Submitted by: {{ pet.submitter}}   </p>
     <p>  Submitted on: {{ pet.submission_date|date:"M d Y" }}   </p>
     <p>  {{ pet.description}}   </p>
-  {% endfor %}
+  {% endif %}
 </div>
+{% endblock %}
